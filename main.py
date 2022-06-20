@@ -30,7 +30,7 @@ class RedditBot:
     print(db.keys())
     if today not in db.keys():
       for item in ss.get_symbol_list(market="US"):
-        if len(item['symbol']) >= 3 and item['symbol'] != 'LMAO' and item['symbol'] != 'ING' and item['symbol'] != 'YOU' and item['symbol'] != 'NEW':
+        if len(item['symbol']) >= 3 and item['symbol'] != 'LMAO' and item['symbol'] != 'ING' and item['symbol'] != 'YOU' and item['symbol'] != 'NEW' and item['symbol'] != 'FOR':
           self.tickercounts[item['symbol']] = 0
       db[today] = self.tickercounts
     else:
